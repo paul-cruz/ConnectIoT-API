@@ -71,18 +71,17 @@ node app
 **Method:** **`POST`**
 
 **Valid methods:** 
-- **`POST`**
-- **`create_registry`**,
-- **`delete_registry`**,
-- **`add_device_to_registry`**,
-- **`delete_device_from_registry`**,
-- **`set_device_data`**,
-- **`get_device_data`**,
-- **`set_device_data_param`**,
-- **`get_device_data_param`**,
-- **`set_device_metadata`**,
-- **`get_device_metadata`**,
-- **`set_device_metadata_param`**,
+- **`create_registry`**
+- **`delete_registry`**
+- **`add_device_to_registry`**
+- **`delete_device_from_registry`**
+- **`set_device_data`**
+- **`get_device_data`**
+- **`set_device_data_param`**
+- **`get_device_data_param`**
+- **`set_device_metadata`**
+- **`get_device_metadata`**
+- **`set_device_metadata_param`**
 - **`get_device_metadata_param`**
 
 | Param                            | Description                                                                                                           |
