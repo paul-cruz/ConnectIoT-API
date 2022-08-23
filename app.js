@@ -101,6 +101,15 @@ const init = async () => {
                     error: "Not method in ConnectIoT contract"
                 }).code(404);
             }
+
+            if (method === "set_device_data") {
+                params["data"] = JSON.stringify(params["data"])
+            }
+
+            if (method === "set_device_metadata") {
+                params["metadata"] = JSON.stringify(params["metadata"])
+            }
+
             const call_resp = await blockchain.Call(
                 account_id,
                 private_key,
