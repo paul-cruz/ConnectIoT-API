@@ -88,13 +88,14 @@ const init = async () => {
             request = processRequest(request);
             let {
                 account_id,
-                private_key,
                 method,
                 params,
                 network,
                 rpc_node,
                 headers
             } = request.payload;
+            let private_key = request.headers.authorization.replace('Bearer ', "");
+
             if (!methods.has(method)) {
                 return res.response({
                     error: "Not method in ConnectIoT contract"
