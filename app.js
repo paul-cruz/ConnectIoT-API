@@ -103,11 +103,11 @@ const init = async () => {
             }
 
             if (method === "set_device_data") {
-                params["data"] = JSON.stringify(params["data"])
+                params["data"] = JSON.stringify(params["data"], (k, v) => v && typeof v === 'object' ? v : '' + v)
             }
 
             if (method === "set_device_metadata") {
-                params["metadata"] = JSON.stringify(params["metadata"])
+                params["metadata"] = JSON.stringify(params["metadata"], (k, v) => v && typeof v === 'object' ? v : '' + v)
             }
 
             const call_resp = await blockchain.Call(
