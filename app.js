@@ -9,6 +9,7 @@ const Hapi = require('@hapi/hapi');
 const fs = require('fs');
 const { Client } = require('pg');
 Client.poolSize = 100;
+require('dotenv').config();
 
 const settings = JSON.parse(fs.readFileSync(api.CONFIG_PATH, 'utf8'));
 const CONTRACT_ID = process.env.NEAR_CONTRACT_ID || "dev-1659666583036-94152895119798";
